@@ -1,1 +1,11 @@
+start
 
+new current_time number
+set current_time TIME
+
+new moscow_time number
+set moscow_time current_time + 30000  // Добавляем 3 часа (30000 в формате HHMMSS)
+
+log number moscow_time
+
+finish
