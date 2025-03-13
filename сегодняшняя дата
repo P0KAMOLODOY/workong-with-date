@@ -1,0 +1,40 @@
+start
+
+new date number 
+new years number
+new months number
+new weeks number
+new days number
+
+set days 0
+set weeks 0
+set years 0
+set months 1
+set date TIME
+
+loop years_loop (date > 31536000000)
+set date date - 31536000000
+set years years + 1
+end years_loop
+
+loop months_loop (date > 2592000000)
+set date date - 2592000000
+set months months + 1
+end months_loop
+
+loop weeks_loop (date > 604800000)
+set date date - 604800000
+set weeks weeks + 1
+end weeks_loop
+
+loop days_loop (date > 86400000)
+set date date - 86400000
+set days days + 1
+end days_loop
+
+set years years + 1970
+
+log number date
+log string "Сегодня ">> years >> " год ">> months >> " месяц ">> weeks >> " неделя ">> days >> " день недели"
+
+finish
