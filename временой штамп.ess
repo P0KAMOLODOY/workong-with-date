@@ -1,1 +1,10 @@
+start
+new current_time number
+set current_time TIME
 
+new adjusted_time number
+set adjusted_time current_time + 10 800 000
+
+log string "Текущее время (UTC+3): " >> adjusted_time
+
+finisg
