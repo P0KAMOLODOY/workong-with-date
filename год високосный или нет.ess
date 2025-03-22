@@ -37,7 +37,7 @@ else
   close
 close
 
-? Выводим результат
+Выводим результат
 if (is_leap > 0)
   log string binary(god) >> " год является високосным."
 else
